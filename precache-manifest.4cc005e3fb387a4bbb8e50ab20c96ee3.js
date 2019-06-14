@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/drmlenovo/static/media/nucleo.b17a118e.ttf"
   },
   {
-    "revision": "e399c7f9e144ba323c404f01dbef84c7",
+    "revision": "c98f0edbc11431512a258eceab3f2ae3",
     "url": "/drmlenovo/index.html"
   }
 ];

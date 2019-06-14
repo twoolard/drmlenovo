@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/drmlenovo/precache-manifest.ae67f59646f3907384cddd7a27120d84.js"
+  "/drmlenovo/precache-manifest.4cc005e3fb387a4bbb8e50ab20c96ee3.js"
 );
 
 workbox.clientsClaim();
