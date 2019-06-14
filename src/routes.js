@@ -18,7 +18,7 @@ var routes = [
   },
   {
     path: '/projectlist',
-    name: 'Project List',
+    name: 'Project Overview',
     rtlName: 'قائمة الجدول',
     icon: 'tim-icons icon-puzzle-10',
     component: TableList,
