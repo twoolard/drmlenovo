@@ -7,3 +7,7 @@ The proof of concept is a basic design rendered with basic image assets, basic H
 A production grade design will implement a suite of enhancements including incorporating a MongoDB NoSQL database, GraphQL API design, the Reactjs library and many other feature enhancing frameworks and libraries. The improved product's architecture will be constructed in Nodejs and the language utilized will be TypeScript.
 
 Temporarily published at: https://parallelam.github.io/drmlenovo/
+
+TODO:
+
+(1) Fix reload bug: Currently page refresh is providing 404 instead of redirecting to demo page at [host]/admin/[route]
