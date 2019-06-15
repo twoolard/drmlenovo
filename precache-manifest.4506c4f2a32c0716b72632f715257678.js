@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d2e27fc8778b5264916420b1b9c9ea8f",
+    "revision": "9d59c3808674eb62387c9cf73fe7dcc2",
     "url": "/drmlenovo/index.html"
   },
   {
-    "revision": "706c2b686cfa0db33938",
+    "revision": "ceb956c685f223b2e167",
     "url": "/drmlenovo/static/css/main.f982a3ca.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/drmlenovo/static/js/2.e354aa8d.chunk.js"
   },
   {
-    "revision": "706c2b686cfa0db33938",
-    "url": "/drmlenovo/static/js/main.9a1ce1e5.chunk.js"
+    "revision": "ceb956c685f223b2e167",
+    "url": "/drmlenovo/static/js/main.319b9ce4.chunk.js"
   },
   {
     "revision": "eea8b37b22a7be5cccbe",
