@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/drmlenovo/static/css/main.9b678abe.chunk.css",
+    "main.css": "/drmlenovo/static/css/main.f982a3ca.chunk.css",
     "main.js": "/drmlenovo/static/js/main.9a1ce1e5.chunk.js",
     "main.js.map": "/drmlenovo/static/js/main.9a1ce1e5.chunk.js.map",
     "runtime~main.js": "/drmlenovo/static/js/runtime~main.db1a3394.js",
@@ -8,9 +8,9 @@
     "static/js/2.e354aa8d.chunk.js": "/drmlenovo/static/js/2.e354aa8d.chunk.js",
     "static/js/2.e354aa8d.chunk.js.map": "/drmlenovo/static/js/2.e354aa8d.chunk.js.map",
     "index.html": "/drmlenovo/index.html",
-    "precache-manifest.911c3485eb4d491ef6de128a1097647c.js": "/drmlenovo/precache-manifest.911c3485eb4d491ef6de128a1097647c.js",
+    "precache-manifest.5a6906666f6f9d1e770efa5b37f029d4.js": "/drmlenovo/precache-manifest.5a6906666f6f9d1e770efa5b37f029d4.js",
     "service-worker.js": "/drmlenovo/service-worker.js",
-    "static/css/main.9b678abe.chunk.css.map": "/drmlenovo/static/css/main.9b678abe.chunk.css.map",
+    "static/css/main.f982a3ca.chunk.css.map": "/drmlenovo/static/css/main.f982a3ca.chunk.css.map",
     "static/media/Background.jpg": "/drmlenovo/static/media/Background.9b1b235a.jpg",
     "static/media/Headshot.jpg": "/drmlenovo/static/media/Headshot.4ece6b02.jpg",
     "static/media/nucleo-icons.css": "/drmlenovo/static/media/nucleo.f0b489a5.woff"
