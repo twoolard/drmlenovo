@@ -1,21 +1,18 @@
 {
-  "main.css": "/drmlenovo/static/css/main.a6c709b1.chunk.css",
-  "main.js": "/drmlenovo/static/js/main.028b0ab8.chunk.js",
-  "main.js.map": "/drmlenovo/static/js/main.028b0ab8.chunk.js.map",
-  "static/css/1.62b48be7.chunk.css": "/drmlenovo/static/css/1.62b48be7.chunk.css",
-  "static/js/1.332306f0.chunk.js": "/drmlenovo/static/js/1.332306f0.chunk.js",
-  "static/js/1.332306f0.chunk.js.map": "/drmlenovo/static/js/1.332306f0.chunk.js.map",
-  "runtime~main.js": "/drmlenovo/static/js/runtime~main.233c7dc6.js",
-  "runtime~main.js.map": "/drmlenovo/static/js/runtime~main.233c7dc6.js.map",
-  "static/media/react-logo.png": "/drmlenovo/static/media/react-logo.eb6be414.png",
-  "static/media/anime6.png": "/drmlenovo/static/media/anime6.eee899f3.png",
-  "static/media/Headshot.jpg": "/drmlenovo/static/media/Headshot.4ece6b02.jpg",
-  "static/media/805197.jpg": "/drmlenovo/static/media/805197.9b1b235a.jpg",
-  "static/media/anime3.png": "/drmlenovo/static/media/anime3.bd6820f1.png",
-  "static/media/nucleo-icons.css": "/drmlenovo/static/media/nucleo.b17a118e.ttf",
-  "static/css/main.a6c709b1.chunk.css.map": "/drmlenovo/static/css/main.a6c709b1.chunk.css.map",
-  "static/css/1.62b48be7.chunk.css.map": "/drmlenovo/static/css/1.62b48be7.chunk.css.map",
-  "index.html": "/drmlenovo/index.html",
-  "precache-manifest.4cc005e3fb387a4bbb8e50ab20c96ee3.js": "/drmlenovo/precache-manifest.4cc005e3fb387a4bbb8e50ab20c96ee3.js",
-  "service-worker.js": "/drmlenovo/service-worker.js"
+  "files": {
+    "main.css": "/drmlenovo/static/css/main.9b678abe.chunk.css",
+    "main.js": "/drmlenovo/static/js/main.9a1ce1e5.chunk.js",
+    "main.js.map": "/drmlenovo/static/js/main.9a1ce1e5.chunk.js.map",
+    "runtime~main.js": "/drmlenovo/static/js/runtime~main.db1a3394.js",
+    "runtime~main.js.map": "/drmlenovo/static/js/runtime~main.db1a3394.js.map",
+    "static/js/2.e354aa8d.chunk.js": "/drmlenovo/static/js/2.e354aa8d.chunk.js",
+    "static/js/2.e354aa8d.chunk.js.map": "/drmlenovo/static/js/2.e354aa8d.chunk.js.map",
+    "index.html": "/drmlenovo/index.html",
+    "precache-manifest.911c3485eb4d491ef6de128a1097647c.js": "/drmlenovo/precache-manifest.911c3485eb4d491ef6de128a1097647c.js",
+    "service-worker.js": "/drmlenovo/service-worker.js",
+    "static/css/main.9b678abe.chunk.css.map": "/drmlenovo/static/css/main.9b678abe.chunk.css.map",
+    "static/media/Background.jpg": "/drmlenovo/static/media/Background.9b1b235a.jpg",
+    "static/media/Headshot.jpg": "/drmlenovo/static/media/Headshot.4ece6b02.jpg",
+    "static/media/nucleo-icons.css": "/drmlenovo/static/media/nucleo.f0b489a5.woff"
+  }
 }
