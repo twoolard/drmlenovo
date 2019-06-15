@@ -150,7 +150,7 @@ class Admin extends React.Component {
             routes={routes}
             bgColor={this.state.backgroundColor}
             logo={{
-              outterLink: ' ',
+              outterLink: 'https://parallelam.github.io/drmlenovo/',
               text: 'Wesley Hatley',
               imgSrc: logo
             }}
