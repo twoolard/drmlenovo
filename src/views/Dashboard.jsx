@@ -12,6 +12,7 @@ import {
   CardHeader,
   CardBody,
   CardTitle,
+  CardFooter,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
@@ -28,9 +29,6 @@ import {
 // core components
 import { chartExample1, chartExample2, chartExample3, chartExample4 } from 'variables/charts.jsx';
 
-let chartStyle = {
-  height: '720px'
-};
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +54,8 @@ class Dashboard extends React.Component {
                       <h5 className="card-category">Project Overview</h5>
                       <CardTitle tag="h2">Truscale</CardTitle>
                     </Col>
-                    <Col sm="6">
+
+                    <Col sm="5">
                       <ButtonGroup className="btn-group-toggle float-right" data-toggle="buttons">
                         <Button
                           tag="label"
@@ -108,11 +107,171 @@ class Dashboard extends React.Component {
                         </Button>
                       </ButtonGroup>
                     </Col>
+                    <Col sm="1">
+                      <UncontrolledDropdown className="float-right">
+                        <DropdownToggle caret className="btn-icon " color="link" data-toggle="dropdown" type="button">
+                          <i className="tim-icons icon-settings-gear-63" />
+                        </DropdownToggle>
+                        <DropdownMenu aria-labelledby="dropdownMenuLink" right>
+                          <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                            Collapse Project Overview
+                          </DropdownItem>
+                          <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                            Change To A Different Project
+                          </DropdownItem>
+                        </DropdownMenu>
+                      </UncontrolledDropdown>
+                    </Col>
                   </Row>
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
                     <Line data={chartExample1[this.state.bigChartData]} options={chartExample1.options} />
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col lg="3" md="6">
+              <Card className="card-stats">
+                <CardBody>
+                  <Row>
+                    <Col xs="5">
+                      <div className="info-icon text-center icon-warning">
+                        <i className="tim-icons icon-chat-33" />
+                      </div>
+                    </Col>
+                    <Col xs="7">
+                      <div className="numbers">
+                        <p className="card-category">Truscale Version</p>
+                        <CardTitle tag="h3">2.0.0</CardTitle>
+                      </div>
+                    </Col>
+                  </Row>
+                </CardBody>
+                <CardFooter>
+                  <hr />
+                  <div className="stats">
+                    <i className="tim-icons icon-refresh-01" /> Update Now
+                  </div>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col lg="3" md="6">
+              <Card className="card-stats">
+                <CardBody>
+                  <Row>
+                    <Col xs="5">
+                      <div className="info-icon text-center icon-primary">
+                        <i className="tim-icons icon-shape-star" />
+                      </div>
+                    </Col>
+                    <Col xs="7">
+                      <div className="numbers">
+                        <p className="card-category">Truscale Clients</p>
+                        <CardTitle tag="h3">45,610</CardTitle>
+                      </div>
+                    </Col>
+                  </Row>
+                </CardBody>
+                <CardFooter>
+                  <hr />
+                  <div className="stats">
+                    <i className="tim-icons icon-sound-wave" /> Latest Data
+                  </div>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col lg="3" md="6">
+              <Card className="card-stats">
+                <CardBody>
+                  <Row>
+                    <Col xs="5">
+                      <div className="info-icon text-center icon-success">
+                        <i className="tim-icons icon-single-02" />
+                      </div>
+                    </Col>
+                    <Col xs="7">
+                      <div className="numbers">
+                        <p className="card-category">Truscale Assets Deployed</p>
+                        <CardTitle tag="h3">155,000</CardTitle>
+                      </div>
+                    </Col>
+                  </Row>
+                </CardBody>
+                <CardFooter>
+                  <hr />
+                  <div className="stats">
+                    <i className="tim-icons icon-trophy" /> Status Reports
+                  </div>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col lg="3" md="6">
+              <Card className="card-stats">
+                <CardBody>
+                  <Row>
+                    <Col xs="5">
+                      <div className="info-icon text-center icon-danger">
+                        <i className="tim-icons icon-molecule-40" />
+                      </div>
+                    </Col>
+                    <Col xs="7">
+                      <div className="numbers">
+                        <p className="card-category">Truscale System Errors</p>
+                        <CardTitle tag="h3">12</CardTitle>
+                      </div>
+                    </Col>
+                  </Row>
+                </CardBody>
+                <CardFooter>
+                  <hr />
+                  <div className="stats">
+                    <i className="tim-icons icon-watch-time" /> In the last 24 hours
+                  </div>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col lg="4">
+              <Card className="card-chart">
+                <CardHeader>
+                  <h5 className="card-category">Truscale Total Asset Shipments</h5>
+                  <CardTitle tag="h3">
+                    <i className="tim-icons icon-bell-55 text-primary" /> 763,215
+                  </CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <div className="chart-area">
+                    <Line data={chartExample2.data} options={chartExample2.options} />
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col lg="4">
+              <Card className="card-chart">
+                <CardHeader>
+                  <h5 className="card-category">Truscale Monthly Profit</h5>
+                  <CardTitle tag="h3">
+                    <i className="tim-icons icon-delivery-fast text-info" /> $3163.46
+                  </CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <div className="chart-area">
+                    <Bar data={chartExample3.data} options={chartExample3.options} />
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col lg="4">
+              <Card className="card-chart">
+                <CardHeader>
+                  <h5 className="card-category">Truscale Completed Installations</h5>
+                  <CardTitle tag="h3">
+                    <i className="tim-icons icon-send text-success" /> 12,100K
+                  </CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <div className="chart-area">
+                    <Line data={chartExample4.data} options={chartExample4.options} />
                   </div>
                 </CardBody>
               </Card>
@@ -137,7 +296,7 @@ class Dashboard extends React.Component {
                         Dismiss Selected Items
                       </DropdownItem>
                       <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                        Another Menu Action
+                        Collapse Meetings Table
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
@@ -305,7 +464,7 @@ class Dashboard extends React.Component {
             <Col lg="6" md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h4">Project Table</CardTitle>
+                  <CardTitle tag="h4">DCG Project Table Overview</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>

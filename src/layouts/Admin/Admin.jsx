@@ -11,18 +11,17 @@ import FixedPlugin from 'components/FixedPlugin/FixedPlugin.jsx';
 
 import routes from 'routes.js';
 
-import logo from 'assets/img/react-logo.png';
+import logo from 'assets/img/Lenovo.png';
 
 var ps;
 
-let imgUrl = require('./../../assets/img/805197.jpg');
+let imgUrl = require('./../../assets/img/Background.jpg');
 let bgStyles = {
-  root: {
-    backgroundImage: `url(${imgUrl})`,
-    backgroundSize: 'cover',
-    overflow: 'hidden'
-  }
+  backgroundImage: `url(${imgUrl})`,
+  backgroundSize: 'cover'
 };
+
+//this.state.backgroundColor
 class Admin extends React.Component {
   constructor(props) {
     super(props);
@@ -41,6 +40,7 @@ class Admin extends React.Component {
         ps = new PerfectScrollbar(tables[i]);
       }
     }
+    window.addEventListener('scroll', this.showNavbarButton);
   }
   componentWillUnmount() {
     if (navigator.platform.indexOf('Win') > -1) {
@@ -48,9 +48,10 @@ class Admin extends React.Component {
       document.documentElement.className += ' perfect-scrollbar-off';
       document.documentElement.classList.remove('perfect-scrollbar-on');
     }
+    window.removeEventListener('scroll', this.showNavbarButton);
   }
   componentDidUpdate(e) {
-    if (e.history.action === 'PUSH') {
+    if (e.location.pathname !== e.history.location.pathname) {
       if (navigator.platform.indexOf('Win') > -1) {
         let tables = document.querySelectorAll('.table-responsive');
         for (let i = 0; i < tables.length; i++) {
@@ -69,6 +70,9 @@ class Admin extends React.Component {
   };
   getRoutes = (routes) => {
     return routes.map((prop, key) => {
+      if (prop.collapse) {
+        return this.getRoutes(prop.views);
+      }
       if (prop.layout === '/admin') {
         return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
       } else {
@@ -76,8 +80,25 @@ class Admin extends React.Component {
       }
     });
   };
-  handleBgClick = (color) => {
-    this.setState({ backgroundColor: color });
+
+  getActiveRoute = (routes) => {
+    let activeRoute = 'Default Brand Text';
+    for (let i = 0; i < routes.length; i++) {
+      if (routes[i].collapse) {
+        let collapseActiveRoute = this.getActiveRoute(routes[i].views);
+        if (collapseActiveRoute !== activeRoute) {
+          return collapseActiveRoute;
+        }
+      } else {
+        if (window.location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
+          return routes[i].name;
+        }
+      }
+    }
+    return activeRoute;
+  };
+  handleActiveClick = (color) => {
+    this.setState({ activeColor: color });
   };
   getBrandText = (path) => {
     for (let i = 0; i < routes.length; i++) {
@@ -86,6 +107,39 @@ class Admin extends React.Component {
       }
     }
     return 'Brand';
+  };
+
+  handleMiniClick = () => {
+    let notifyMessage = 'Sidebar mini ';
+    if (document.body.classList.contains('sidebar-mini')) {
+      this.setState({ sidebarMini: false });
+      notifyMessage += 'deactivated...';
+    } else {
+      this.setState({ sidebarMini: true });
+      notifyMessage += 'activated...';
+    }
+    let options = {};
+    options = {
+      place: 'tr',
+      message: notifyMessage,
+      type: 'primary',
+      icon: 'tim-icons icon-bell-55',
+      autoDismiss: 7
+    };
+    this.refs.notificationAlert.notificationAlert(options);
+    document.body.classList.toggle('sidebar-mini');
+  };
+  toggleSidebar = () => {
+    this.setState({
+      sidebarOpened: !this.state.sidebarOpened
+    });
+    document.documentElement.classList.toggle('nav-open');
+  };
+  closeSidebar = () => {
+    this.setState({
+      sidebarOpened: false
+    });
+    document.documentElement.classList.remove('nav-open');
   };
   render() {
     return (
@@ -96,13 +150,14 @@ class Admin extends React.Component {
             routes={routes}
             bgColor={this.state.backgroundColor}
             logo={{
-              outterLink: '',
+              outterLink: ' ',
               text: 'Wesley Hatley',
               imgSrc: logo
             }}
             toggleSidebar={this.toggleSidebar}
           />
-          <div className="main-panel" ref="mainPanel" data={this.state.backgroundColor}>
+
+          <div className="main-panel" ref="mainPanel" style={bgStyles}>
             <AdminNavbar
               {...this.props}
               brandText={this.getBrandText(this.props.location.pathname)}

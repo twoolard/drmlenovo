@@ -19,20 +19,20 @@ class UserProfile extends React.Component {
                     <Row>
                       <Col className="pr-md-1" md="5">
                         <FormGroup>
-                          <label>Company (disabled)</label>
-                          <Input defaultValue="Lenovo" disabled placeholder="Company" type="text" />
+                          <label>Department</label>
+                          <Input defaultValue="DCG" disabled placeholder="Company" type="text" />
                         </FormGroup>
                       </Col>
                       <Col className="px-md-1" md="3">
                         <FormGroup>
                           <label>Username</label>
-                          <Input defaultValue="whatley" placeholder="Username" type="text" />
+                          <Input disabled defaultValue="whatley" placeholder="Username" type="text" />
                         </FormGroup>
                       </Col>
                       <Col className="pl-md-1" md="4">
                         <FormGroup>
                           <label htmlFor="exampleInputEmail1">Email address</label>
-                          <Input placeholder="whatley@lenovo.com" type="email" />
+                          <Input disabled placeholder="whatley@lenovo.com" type="email" />
                         </FormGroup>
                       </Col>
                     </Row>
@@ -79,16 +79,29 @@ class UserProfile extends React.Component {
                       </Col>
                     </Row>
                     <Row>
-                      <Col md="8">
+                      <Col md="6">
                         <FormGroup>
-                          <label>About Me</label>
+                          <label>Lenovo Address</label>
                           <Input
                             cols="80"
-                            defaultValue="Just a nerd that listens to way too much trap music."
-                            placeholder="Here can be your description"
-                            rows="4"
-                            type="textarea"
+                            disabled
+                            defaultValue="8001 Development Drive, Morrisville, NC 27560 B8-2F-2W-H336"
+                            placeholder="This should be your work address, floor and (if applicable) desk assignment"
+                            rows="1"
+                            type="text"
                           />
+                        </FormGroup>
+                      </Col>
+                      <Col className="pl-md-1" md="4">
+                        <FormGroup>
+                          <label>Role</label>
+                          <Input disabled defaultValue="Senior Software Engineer" placeholder="Title" type="text" />
+                        </FormGroup>
+                      </Col>
+                      <Col className="pl-md-1" md="2">
+                        <FormGroup>
+                          <label>Pay Code</label>
+                          <Input disabled defaultValue="8691" placeholder="Pay Code" type="number" />
                         </FormGroup>
                       </Col>
                     </Row>
@@ -117,7 +130,10 @@ class UserProfile extends React.Component {
                     <p className="description">Senior Software Engineer at Lenovo</p>
                   </div>
                   <div className="card-description">
-                    In west Philadelphia born and raised, on the playground where I spent most of my days...
+                    Wesley Hatley was interviewed and hired by Wesley Lathan on May 1st of 2019 as a Senior Software
+                    Engineer. He prefers the moniker Wes, or when Wes Lathan is present he goes by "The Other Wes."
+                    Wesley is a full stack MERN engineer, specializing predominantly in back-end, Nodejs architecture,
+                    but more than comfortable with front-end development as well.
                   </div>
                 </CardBody>
                 <CardFooter>
