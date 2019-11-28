@@ -8,3 +8,5 @@ CHANGELOG.md
 LICENSE.md
 debug.log
 ISSUE_TEMPLATE.md
+yarn-error.log
+build/
